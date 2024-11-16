@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myapp.MainActivity">
+
+    <!-- MaterialToolbar at the top of the screen -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        app:navigationIcon="@drawable/ic_launcher_foreground"
+        android:background="?attr/colorPrimary"
+        app:titleTextColor="@color/white"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Movement Detector" />
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <TextView
+            android:id="@+id/text_start_stop"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="32dp"
+            android:lineHeight="42dp"
+            android:text="Please Press start to start detection"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <Button
+            android:id="@+id/btn_start_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textSize="24dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="30dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="@string/start" />
+        <TextView
+            android:id="@+id/text_changeStatus"
+            android:layout_marginTop="30dp"
+            android:paddingTop="10dp"
+            android:textSize="18dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/bg_green"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:text="@string/no_change_detected"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:textSize="32dp"
+            android:lineHeight="42dp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:paddingLeft="20dp"
+            android:visibility="gone"
+            android:paddingRight="30dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="@string/ask" />
+        <TextView
+            android:id="@+id/text_change_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textSize="20dp"
+            android:lineHeight="32dp"
+            android:text="@string/log"
+            android:padding="12dp"
+            android:scrollbars="vertical"
+            android:background="@drawable/border_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

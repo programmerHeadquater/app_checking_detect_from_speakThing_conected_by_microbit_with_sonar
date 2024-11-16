@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="start">Start</string>
+    <string name="start_text">Please press start to start detection</string>
+    <string name="cancel">Cancel</string>
+    <string name="cancel_text">Please press cancel to cancel the detection</string>
+    <string name="note"></string>
+    <string name="ask">Allow Notification</string>
+    <string name="log">CHANGE LOG \n</string>
+    <string name="change_detected">Change detected</string>
+    <string name="no_change_detected">No change detected</string>
+
+</resources>
